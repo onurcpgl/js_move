@@ -7,13 +7,11 @@
     <title>hafta-14 örnek-6</title>
 </head>
 <body>
+    
     <button onclick="basla()">Başla</button>
     <button onclick="dur()">Dur</button>
-
     <img src="22.png" id="top" width="70">
-
-
-
+    
     <script>
         var xartim=5,yartim=5,x=100,y=100;
         function basla(){
@@ -23,9 +21,7 @@
             if(x<=0) xartim=5;
             if(y>=yuk) yartim=-5;
             if(y<=0) yartim=5;
-            x+=xartim; y+=yartim;
-            
-
+            x+=xartim; y+=yartim;          
             document.getElementById("top").style.left=x+"px";
             document.getElementById("top").style.top= y+"px";
             z1=setTimeout("basla()",20);
@@ -34,8 +30,6 @@
         {
             clearTimeout(z1);
         }
-
-
             document.getElementById("top").style.position="absolute";
             document.getElementById("top").style.left="100px";
             document.getElementById("top").style.top="100px";
