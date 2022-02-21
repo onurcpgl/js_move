@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hafta-14 örnek-6</title>
+</head>
+<body>
+    <button onclick="basla()">Başla</button>
+    <button onclick="dur()">Dur</button>
+
+    <img src="22.png" id="top" width="70">
+
+
+
+    <script>
+        var xartim=5,yartim=5,x=100,y=100;
+        function basla(){
+            gen=window.innerWidth-70;
+            yuk=window.innerHeight-70;
+            if(x>=gen) xartim=-5;
+            if(x<=0) xartim=5;
+            if(y>=yuk) yartim=-5;
+            if(y<=0) yartim=5;
+            x+=xartim; y+=yartim;
+            
+
+            document.getElementById("top").style.left=x+"px";
+            document.getElementById("top").style.top= y+"px";
+            z1=setTimeout("basla()",20);
+        }
+        function dur()
+        {
+            clearTimeout(z1);
+        }
+
+
+document.getElementById("top").style.position="absolute";
+document.getElementById("top").style.left="100px";
+document.getElementById("top").style.top="100px";
+
+    </script>
+</body>
+</html>
